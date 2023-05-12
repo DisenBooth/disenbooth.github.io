@@ -23,9 +23,8 @@
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>DisenBooth: Identity-Preserving Disentangled Tuning for Subject-Driven Text-to-Image Generation</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -35,7 +34,8 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css">  
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -43,6 +43,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+     
 </head>
 <body>
 
@@ -52,27 +53,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title"> DisenBooth: Identity-Preserving Disentangled Tuning for Subject-Driven Text-to-Image Generation </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
+              <!-- <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Hong Chen</a>,</span> -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                Anonymous</span>
+              <!-- <span class="author-block"> -->
+                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yipeng Zhang</a></span> -->
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                  <!-- <div class="is-size-5 publication-authors"> -->
+                    <!-- <span class="author-block">Tsinghua University<br>Arxiv 2023</span> -->
+                    <!--<span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  <!-- </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -80,10 +81,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,10 +92,10 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,10 +103,10 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,7 +114,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -122,33 +123,47 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/disentangle.png" alt="result">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        DisenBooth can disentangle the subject identity and the identity-unrelated information in the given input images. Then DisenBooth utilize the subject identity information, e.g., "a S* dog", and new text descriptions, e.g., "on top of a pink fabric", 
+        to generate new images about the subject. The disentangled strategy tackles the problem of existing methods, where they overfit identity-unrelated information or change the subject identity in the generated images.  
       </h2>
+      <!-- <div class="content has-text-justified">
+        <p>
+          DisenBooth can disentangle the input images to a shared embedding and several image-specific embeddings, where the former is to capture the subject identity and the latter is used to capture the identity-unrelated information like background, pose, etc. The identity embedding can be used for better subject-driven text-to-image generation.
+        </p>
+      </div> -->
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Given a small set of images of a target subject, subject-driven text-to-image generation aims to generate new images of the subject according to 
+            the text descriptions, which has drawn an increasing attention in the community. The key problem of subject-driven text-to-image generation lies 
+            in that besides aligning well with the text descriptions, the generated images should also preserve the subject identity. Existing subject-driven 
+            text-to-image generation methods are mainly based on finetuning a pretrained generative model on the small set of images. However, these methods 
+            bind the subject to an embedding highly entangled with subject-identity-unrelated information, like the background and the subject pose, which 
+            will impair the generation results in two ways: (i) the generated images may overfit the identity-unrelated information and become inconsistent 
+            with the given text descriptions, and (ii) containing the identity-unrelated information may cause the embedding to contain less identity information, 
+            easily resulting the identity change in the generated images. To tackle the problem, in this paper, we propose DisenBooth, an identity-preserving 
+            disentangled tuning framework for subject-driven text-to-image generation. Specifically, DisenBooth finetunes the pretrained diffusion model in the denoising 
+            process. Different from previous works that utilize an entangled embedding to denoise each image, DisenBooth respectively uses a shared embedding to preserve
+             the subject identity and an image-specific embedding to capture the identity-unrelated information. To make the two embeddings disentangled, the weak denoising 
+             and contrastive embedding auxiliary objectives are proposed for tuning. Extensive experiments show that with the identity-preserved embedding, DisenBooth 
+             outperforms existing methods in subject-driven text-to-image generation. Additionally, with the two disentangled embeddings, DisenBooth can provide higher 
+             generation flexibility and controllability.
           </p>
         </div>
       </div>
@@ -157,134 +172,139 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Model Structure -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Model Architecture</h2>
+        <div class="hero-body">
+          <div class="container">
+            <img src="static/images/framework.png" alt="architecture">
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            DisenBooth conducts finetuning in the denoising process, where each input image is denoised with the shared embedding $f_s$ to preserve the subject 
+            identity, and the image-specific embedding $f_i$ to capture the identity-unrelated information. To make the two embeddings disentangled, the weak 
+            denoising objective $L_2$ and the contrastive embedding objective $L_3$ are proposed. Fine-tuned parameters include the adapter and the LoRA parameters.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Model Structures -->
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<!-- Visual comparison with other methods-->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Visual Comparison to Other Methods</h2>
+      </div>
+    </div>
+  </div>
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/dog_compare.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Generate different images of the same dog with different text prompts, given the input 5 images of the dog.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/can_comparison.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Generate different images of the same can with different text prompts, given the input 6 images of the can.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/complex1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Generating new images with more complex text prompts.
        </h2>
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+  
     </div>
   </div>
 </div>
 </div>
 </section>
-<!-- End image carousel -->
+<!-- End visual comparison with other methods-->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">DisenBooth Generation Results</h2>
+        <div class="hero-body">
+          <div class="container">
+            <img src="static/images/overall_generation.png" alt="results">
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+        <div class="content has-text-justified">
+          <p>
+            Above are more reults generated by DisenBooth, including some anime characters, which show the effectiveness of our proposed DisenBooth.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End Model Structures -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<!-- Disentanglement Result-->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Reference-Image-Guided Subject-Driven Text-to-Image Generation</h2>
+        <div class="hero-body">
+          <div class="container">
+            <img src="static/images/ref_guided.png" alt="architecture">
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            With the disentangled identity and identity-unrelated embeddings, we can jointly use the reference image and the text prompt to make the generated image conform to the text while inheriting some characteristics of the reference image.
+            From left to write, we increase the weight of the image-specific embedding, and the generated image will be more similar to the reference image while preserving the pose of the dog. However, too large weight may risk overfitting the 
+            reference image, because the embedding becomes highly entangled.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- End Disentanglement Result-->
 
+<!-- Acknowledgement -->
+<!-- <section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>
+      The html template is from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">eliahuhorwitz/Academic-project-page-template</a>.
+    </p>
+  </div>
+</section> -->
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
+  <!-- <section class="section" id="BibTeX"> -->
+    <!-- <div class="container is-max-desktop content"> -->
+      <!-- <h2 class="title">BibTeX</h2> -->
+      <!-- <pre><code>BibTex Code Here</code></pre> -->
+    <!-- </div> -->
+<!-- </section> -->
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
@@ -292,7 +312,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
@@ -300,7 +320,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 <!-- Statcounter tracking code -->
   
