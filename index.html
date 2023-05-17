@@ -130,8 +130,8 @@
     <div class="hero-body">
       <img src="static/images/disentangle.png" alt="result">
       <h2 class="subtitle has-text-centered">
-        DisenBooth can disentangle the subject identity and the identity-unrelated information in the given input images. Then DisenBooth utilize the subject identity information, e.g., "a S* dog", and new text descriptions, e.g., "on top of a pink fabric", 
-        to generate new images about the subject. The disentangled strategy tackles the problem of existing methods, where they overfit identity-unrelated information or change the subject identity in the generated images.  
+        DisenBooth can disentangle the subject identity-relevant and the identity-irrelevant information in the given input images. Then DisenBooth utilizes the subject identity-relevant information, e.g., "a S* dog", and new text descriptions, e.g., "on top of a pink fabric", 
+        to generate new images about the subject. The disentangled strategy tackles the problem of existing methods, where they overfit identity-irrelevant information or change the subject identity in the generated images.  
       </h2>
       <!-- <div class="content has-text-justified">
         <p>
@@ -151,17 +151,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Given a small set of images of a target subject, subject-driven text-to-image generation aims to generate new images of the subject according to the text descriptions,
-             which has drawn increasing attention recently. The key problem of subject-driven text-to-image generation lies in that besides aligning with the text descriptions, 
-             the generated images should also preserve the subject identity. Existing subject-driven text-to-image generation methods are mainly based on finetuning a pretrained
-              generative model. However, these methods bind the subject to an embedding highly entangled with subject-identity-unrelated information, like the background and the subject pose,
-               which will impair the generation results in two ways: (i) the generated images may overfit the identity-unrelated information and become inconsistent with the given text descriptions,
-                and (ii) containing the identity-unrelated information may cause the embedding to contain less identity information, easily resulting in identity change in the generated images. 
-                To tackle the problem, we propose DisenBooth, an identity-preserving disentangled tuning framework for subject-driven text-to-image generation. Specifically, DisenBooth finetunes
-                 the pretrained diffusion model in the denoising process. Different from previous works that utilize an entangled embedding to denoise each image, DisenBooth respectively uses a 
-                 shared embedding to preserve the subject identity and an image-specific embedding to capture the identity-unrelated information. To make the two embeddings disentangled, 
-                 the weak denoising and contrastive embedding auxiliary objectives are proposed for tuning. Extensive experiments show that with the identity-preserved embedding, DisenBooth 
-                 outperforms existing methods in subject-driven text-to-image generation. Additionally, with the two disentangled embeddings, DisenBooth can provide higher generation flexibility and controllability.
+            Subject-driven text-to-image generation aims to generate customized images of the given subject based on the text descriptions, 
+            which has drawn increasing attention recently. Existing methods mainly resort to finetuning a pretrained generative model, 
+            where the identity-relevant information (e.g., the boy) and the identity-irrelevant information (e.g., the background or the pose of the boy) 
+            are entangled in the latent embedding space. However, the highly entangled latent embedding may lead to the failure of subject-driven 
+            text-to-image generation as follows: (i) the identity-irrelevant information hidden in the entangled embedding may dominate the generation process, 
+            resulting in the generated images heavily dependent on the irrelevant information while ignoring the given text descriptions; 
+            (ii) the identity-relevant information carried in the entangled embedding can not be appropriately preserved, resulting in 
+            identity change of the subject in the generated images. To tackle the problems, we propose DisenBooth, an identity-preserving disentangled 
+            tuning framework for subject-driven text-to-image generation in this paper. Specifically, DisenBooth finetunes the pretrained diffusion model 
+            in the denoising process. Different from previous works that utilize an entangled embedding to denoise each image, DisenBooth instead utilizes 
+            disentangled embeddings to respectively preserve the subject identity and capture the identity-irrelevant information. We further design 
+            the novel weak denoising and contrastive embedding auxiliary tuning objectives to achieve the disentanglement. Extensive experiments 
+            show that our proposed DisenBooth framework outperforms baseline models for subject-driven text-to-image generation with the identity-preserved embedding. 
+            Additionally, by combining the identity-preserved embedding and identity-irrelevant embedding, DisenBooth demonstrates more generation flexibility and controllability.
           </p>
         </div>
       </div>
@@ -183,8 +186,8 @@
         </div>
         <div class="content has-text-justified">
           <p>
-              DisenBooth conducts finetuning in the denoising process, where each input image is denoised with the shared embedding <math><msub><mi>f</mi><mn>s</mn></msub></math> to preserve the subject 
-              identity, and the image-specific embedding <math><msub><mi>f</mi><mn>i</mn></msub></math> to capture the identity-unrelated information. To make the two embeddings disentangled, the weak 
+              DisenBooth conducts finetuning in the denoising process, where each input image is denoised with the textual embedding <math><msub><mi>f</mi><mn>s</mn></msub></math> shared by all the images to preserve the subject 
+              identity, and visual embedding <math><msub><mi>f</mi><mn>i</mn></msub></math> to capture the identity-irrelevant information. To make the two embeddings disentangled, the weak 
               denoising objective <math><msub><mi>L</mi><mn>2</mn></msub></math> and the contrastive embedding objective <math><msub><mi>L</mi><mn>3</mn></msub></math> are proposed. Fine-tuned parameters include the adapter and the LoRA parameters.
           </p>
         </div>
@@ -271,8 +274,8 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            With the disentangled identity and identity-unrelated embeddings, we can jointly use the reference image and the text prompt to make the generated image conform to the text while inheriting some characteristics of the reference image.
-            From left to right, we increase the weight of the image-specific embedding, and the generated image will be more similar to the reference image while preserving the pose of the dog.
+            With the disentangled identity-preserved and identity-irrelevant embeddings, we can jointly use the reference image and the text prompt to make the generated image conform to the text while inheriting some characteristics of the reference image.
+            From left to right, we increase the weight of the image-irrelevant embedding, and the generated image will be more similar to the reference image while preserving the pose of the dog.
           </p>
         </div>
       </div>
